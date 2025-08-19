@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Notion Clone
+A responsive, dynamic React/Next.js clone of Notion’s header and navigation system, featuring:
 
-## Getting Started
+Server-driven menu data fetched dynamically from a Next.js API route
 
-First, run the development server:
+Fully responsive layout with desktop dropdown menus and a mobile hamburger overlay menu
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Custom dropdown interactions and animations built with Tailwind CSS
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lightweight client-side logic for menu toggling and interaction handling
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Built with Next.js 13 app directory conventions and React hooks for clean structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Features
+Dynamic Menu Data: Menu items and dropdown data are fetched from a Next.js API route (/api/menu), enabling easy updates without code changes
 
-## Learn More
+Desktop Navigation: Hover and focus accessible dropdown menus with animated fade-in effect
 
-To learn more about Next.js, take a look at the following resources:
+Mobile Navigation: Hamburger menu toggles a full-screen overlay with smooth open/close and responsive menu items
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Accessible: Keyboard navigable dropdown and aria attributes for screen readers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Responsive Design: Tailwind CSS ensures smooth scaling and layout across all device sizes
 
-## Deploy on Vercel
+Custom Analytics Ready: Dropdown items include attributes for custom interaction tracking (optional integration)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Performance Optimized: Minimal client-side state and efficient event handling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Installation
+Clone the repo and install dependencies:
+
+bash
+git clone https://github.com/nihal9956/Notion-clone.git
+cd notion-clone
+## npm install
+Run the development server:
+
+bash
+## npm run dev
+Access the app at http://localhost:3000
+
+Project Structure
+app/api/menu/route.ts: API route serving menu data as JSON
+
+app/components/Header.tsx: Header React component implementing desktop and mobile menus
+
+public/: Static assets like images and logos (notion.png, header-img.avif, etc.)
+
+styles/ or inline styles within Header for animations and responsive tweaks
+
+Customization
+Update menu data in app/api/menu/route.ts to modify navigation items
+
+Modify Tailwind CSS classes in Header.tsx to adjust styling and layout
+
+Add custom analytics by enhancing event handlers on dropdown elements using the included data-analytics-label attributes
+
+Notes
+The project uses Next.js 13 app directory routing conventions — API routes require files named route.ts inside appropriately named folders
+
+Client-side rendering is limited to interactive parts to benefit from Server Components performance advantages
+
+Screenshots and assets mimic Notion’s branding but can be replaced freely
+
+License
+This project is for educational and personal use. No affiliation with Notion Labs.
+Please use responsibly and do not replicate proprietary content beyond learning purposes.
+

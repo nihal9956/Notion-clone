@@ -245,32 +245,6 @@ const Header = () => {
           </div>
         </div>
       )}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(-16px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 0.22s cubic-bezier(0.4, 0, 1, 1);
-        }
-        @media (max-width: 1024px) {
-          .max-w-6xl {
-            max-width: 97vw;
-          }
-        }
-        @media (max-width: 768px) {
-          .max-w-6xl {
-            flex-direction: column;
-            padding: 1.5rem 0.5rem;
-          }
-        }
-      `}</style>
     </header>
   );
 };
