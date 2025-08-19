@@ -87,6 +87,7 @@ const Header = () => {
                             {title}
                           </div>
                         )}
+                        {/* @ts-ignore */}
                         {items?.map((item) => (
                           <div className="mb-3" key={item.label} data-analytics-label={item.label}>
                             <div className="text-[15px] font-semibold text-black">
@@ -125,10 +126,12 @@ const Header = () => {
               </div>
             )}
           </div>
+          
           {menuData.navLinks
-            .filter((nav) => nav.label !== 'Notion')
+            .filter((nav:any) => nav.label !== 'Notion')
             .map((nav, i) => (
               <a key={i} href="#" className="nav-link text-gray-900">
+                 {/* @ts-ignore */}
                 {nav.label}
               </a>
             ))}
