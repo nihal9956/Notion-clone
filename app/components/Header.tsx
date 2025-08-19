@@ -177,7 +177,7 @@ const Header = () => {
           <div className="bg-white w-[95vw] max-w-xs rounded-2xl shadow-lg flex flex-col relative max-h-[90vh] overflow-y-auto pb-5">
             {/* Close X */}
             <button
-              className="absolute right-5 top-4 text-2xl text-gray-700 hover:text-black transition"
+              className="absolute right-5 top-1 text-2xl text-gray-700 hover:text-black transition"
               onClick={() => setMobileOpen(false)}
               aria-label="Close Menu"
             >
@@ -192,7 +192,7 @@ const Header = () => {
                 Get Notion free
               </a>
             </div>
-            <nav className="flex flex-col gap-2 items-start pt-4 px-7 pb-5">
+            <nav className=" text-black flex flex-col gap-2 items-start pt-4 px-7 pb-5">
               <a
                 href="#"
                 className="font-semibold text-lg py-1 flex items-center gap-2"
