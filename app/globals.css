@@ -3,8 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  overflow-x: hidden;
 }
 
+body{
+  overflow-x: hidden;
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -14,7 +18,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #fff;
     --foreground: #ededed;
   }
 }
@@ -23,4 +27,341 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.notion-footer {
+  background: #fff;
+  border-top: 1px solid #eee;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  font-size: 15px;
+  padding-top: 44px;
+  padding-bottom: 32px;
+  margin-top: 40px;
+}
+.notion-footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 48px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+.notion-footer__brand {
+  min-width: 220px;
+  max-width: 260px;
+  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.notion-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.notion-footer__logo-text {
+  font-size: 20px;
+  margin-left: 2px;
+}
+.notion-footer__social {
+  display: flex;
+  gap: 10px;
+  margin: 4px 0;
+}
+.notion-footer__icon {
+  color: #222;
+  opacity: 0.7;
+  transition: opacity 0.16s;
+}
+.notion-footer__icon:hover {
+  opacity: 1;
+}
+.notion-footer__lang-copyright {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+}
+.notion-footer__lang button {
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background: #f7f7fa;
+  font: inherit;
+  color: #333;
+  padding: 6px 13px 6px 10px;
+  cursor: pointer;
+}
+.notion-footer__cookie {
+  color: #888;
+  font-size: 13px;
+}
+.notion-footer__copyright {
+  color: #888;
+  font-size: 12px;
+}
+.notion-footer__links {
+  display: flex;
+  gap: 120px;
+  flex-wrap: wrap;
+}
+.notion-footer__heading {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.notion-footer__links > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 120px;
+  margin-bottom: 10px;
+}
+.notion-footer__links > div a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.16s;
+  font-size: 15px;
+}
+.notion-footer__links > div a:hover,
+.notion-footer__explore {
+  color: #2563eb;
+  font-weight: 550;
+}
+.notion-footer__explore {
+  margin-top: 10px;
+}
+/* Responsive styles */
+@media only screen and (max-width: 950px) {
+  .notion-footer__container {
+    flex-direction: column;
+    gap: 28px;
+    padding: 0 10px;
+  }
+  .notion-footer__brand, .notion-footer__links {
+    max-width: 100%;
+  }
+  .notion-footer__links {
+    gap: 32px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .notion-footer {
+    padding-top: 24px;
+    padding-bottom: 18px;
+    font-size: 14px;
+  }
+  .notion-footer__container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 6px;
+  }
+  .notion-footer__logo {
+    font-size: 16px;
+  }
+  .notion-footer__brand {
+    align-items: flex-start;
+    max-width: 99%;
+  }
+  .notion-footer__links {
+    flex-direction: row;
+    gap: 70px;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+  }
+  .notion-footer__links > div {
+    min-width: 0;
+    margin-bottom: 8px;
+  }
+}
+
+/* This is a debug/test: ensures you see movement */
+.test-marquee {
+  animation: marquee 30s linear infinite;
+  min-width: fit-content;
+  display: flex;
+  margin-top: 20px;
+}
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+.find-anywhere-section {
+  width: 100%;
+  background: #fff;
+  padding: 48px 0 36px 0;
+}
+.find-anywhere-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: flex-start;
+  gap: 44px;
+  flex-wrap: wrap;
+}
+.find-anywhere-left {
+  flex: 1 1 360px;
+  max-width: 530px;
+  min-width: 230px;
+}
+.find-anywhere-right {
+  flex: 1 1 400px;
+  min-width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.screenshot-bg {
+  background: #f6faff;
+  border-radius: 18px;
+  padding: 32px 14px;
+  padding-bottom: 0;
+  width: 100%;
+  max-width: 640px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.screenshot-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.find-anywhere-left h2 {
+  font-size: 2.45rem;
+  line-height: 1.12;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #202124;
+}
+.find-anywhere-sub {
+  font-size: 1.13rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+.find-anywhere-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.blue-btn {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 7px;
+  padding: 11px 27px;
+  font-weight: 600;
+  shadow: 0 0.5px 1px 0 #ddd;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.19s;
+}
+.blue-btn:hover { background: #1745af; }
+.link-btn {
+  font-size: 16px;
+  color: #2563eb;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.16s;
+}
+.link-btn:hover {
+  color: #1745af;
+  text-decoration: underline;
+}
+
+.find-anywhere-integrates {
+  display: flex;
+  gap: 32px;
+  margin-top: 26px;
+  font-size: 16px;
+  flex-wrap: wrap;
+}
+.integrates-title {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #666;
+}
+.find-anywhere-integrates ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.find-anywhere-integrates li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #222;
+  margin-bottom: 8px;
+}
+.integrate-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background: #e4ebfa;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+.integrate-coming {
+  font-size: 14px;
+  color: #8c98ae;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 14px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1020px) {
+  .find-anywhere-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+  .find-anywhere-right,
+  .find-anywhere-left {
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .find-anywhere-section {
+    padding: 26px 0;
+  }
+  .find-anywhere-left h2 {
+    font-size: 1.5rem;
+  }
+  .find-anywhere-buttons {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .screenshot-bg {
+    padding: 8px 0;
+    border-radius: 9px;
+  }
+  .screenshot-img {
+    border-radius: 6px;
+  }
+}
+@media (max-width: 480px) {
+  .find-anywhere-content {
+    padding: 0 7px;
+  }
+  .find-anywhere-left,
+  .find-anywhere-right {
+    padding: 0;
+  }
+  .find-anywhere-section {
+    padding: 13px 0;
+  }
 }
